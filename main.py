@@ -33,3 +33,8 @@ def view_detiale(patient:str =Path(..., description="Enter the patient ID", exam
     if patient in data:
         return  data[patient]
     raise HTTPException(status_code=400, detail="Invalid request")
+
+@app.get("/hello")
+def hello():
+    return {"message":"hello welcome to the my website "}
+
