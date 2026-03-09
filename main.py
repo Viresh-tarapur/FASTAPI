@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Path, HTTPException
+from fastapi import FastAPI, Path, Query, HTTPException
 import json
 
 app = FastAPI()
@@ -34,7 +34,6 @@ def view_detiale(patient:str =Path(..., description="Enter the patient ID", exam
         return  data[patient]
     raise HTTPException(status_code=400, detail="Invalid request")
 
-@app.get("/hello")
-def hello():
-    return {"message":"hello welcome to the my website "}
-
+@app.get("/sort")
+def sorting(sort_by:str=Query(... ,Exception='Sort basis on the age ') ,filter_by:str = Query=('asc' Exception=("ente"))):
+    
