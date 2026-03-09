@@ -35,5 +35,20 @@ def view_detiale(patient:str =Path(..., description="Enter the patient ID", exam
     raise HTTPException(status_code=400, detail="Invalid request")
 
 @app.get("/sort")
-def sorting(sort_by:str=Query(... ,Exception='Sort basis on the age ') ,filter_by:str = Query=('asc' Exception=("ente"))):
+def sort_patients(sort_by: str = Query( ... , description='Sort on the basis of height, weight or bmi'), order: str = Query('asc',description='sort in asc or desc order')):
     
+    valied_data=["height" , "weight" , "bmi"]
+    if sort_by not in valied_data:
+        raise HTTPException(status_code=400, detail=f"enter the this only{valied_data}")
+    
+    order_valied=["asc" ,"desc"]
+    
+    if order not in order_valied:
+        raise HTTPException(status_code=400 , detail = f"enter the {order_valied}")
+    
+    data =dataload()
+    
+    sort_order= True if order == "desc" else False
+    sorted_data=sorted(data.values(), key=lambda x: x.get(sort_by, 0), reverse=sort_order)
+    
+    return sorted_data
