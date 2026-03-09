@@ -1,0 +1,62 @@
+{
+    "P001": {
+        "name": "Rahul Sharma",
+        "age": 30,
+        "gender": "Male",
+        "disease": "Fever"
+    },
+    "P002": {
+        "name": "Priya Verma",
+        "age": 25,
+        "gender": "Female",
+        "disease": "Cold"
+    },
+    "P003": {
+        "name": "Amit Patel",
+        "age": 40,
+        "gender": "Male",
+        "disease": "Diabetes"
+    },
+    "P004": {
+        "name": "Sneha Reddy",
+        "age": 35,
+        "gender": "Female",
+        "disease": "Asthma"
+    },
+    "P005": {
+        "name": "Karan Singh",
+        "age": 28,
+        "gender": "Male",
+        "disease": "Headache"
+    },
+    "P006": {
+        "name": "Neha Gupta",
+        "age": 32,
+        "gender": "Female",
+        "disease": "Allergy"
+    },
+    "P007": {
+        "name": "Arjun Mehta",
+        "age": 45,
+        "gender": "Male",
+        "disease": "Hypertension"
+    },
+    "P008": {
+        "name": "Pooja Nair",
+        "age": 29,
+        "gender": "Female",
+        "disease": "Migraine"
+    },
+    "P009": {
+        "name": "Vikram Joshi",
+        "age": 50,
+        "gender": "Male",
+        "disease": "Heart Disease"
+    },
+    "P010": {
+        "name": "Ananya Iyer",
+        "age": 27,
+        "gender": "Female",
+        "disease": "Skin Allergy"
+    }
+}
